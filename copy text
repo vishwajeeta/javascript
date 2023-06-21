@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav_bar{
+            display: grid;
+            grid-auto-flow: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav_bar">
+        <h1 onclick="copyClipbord(getAttribute('id'))" id="hii1">hello world1</h1>
+        <h1 onclick="copyClipbord(getAttribute('id'))" id="hii2">hello world2</h1>
+        <h1 onclick="copyClipbord(getAttribute('id'))" id="hii3">hello world3</h1>
+        <h1 onclick="copyClipbord(getAttribute('id'))" id="4">hello world4</h1>
+    </div>
+</body>
+<script>
+    function copyClipbord(target){
+        var copyText=document.getElementById(target).innerHTML;
+        navigator.clipboard.writeText(copyText);
+    }
+</script>
+</html>
